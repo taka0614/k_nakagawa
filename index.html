@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja" class="darkmode">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>デザイン案１</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      @media (prefers-color-scheme: drak) {
+        body {
+          background-color: #231802
+          ;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="site">
+        <h1>
+          <svg
+            id="_レイヤー_1"
+            data-name="レイヤー 1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="58.81"
+            height="290.62"
+            viewBox="0 0 58.81 290.62"
+          >
+            <defs>
+              <desc>中川賢一</desc>
+              <style>
+                .cls-1 {
+                  fill: var(--text);
+                  transition: var(--change);
+                  font-family: MicrosoftYaHei, "Microsoft YaHei";
+                  font-size: 48px;
+                  glyph-orientation-vertical: 0deg;
+                  letter-spacing: 0.2em;
+                  text-orientation: upright;
+                  writing-mode: tb;
+                }
+              </style>
+            </defs>
+            <text class="cls-1" transform="translate(29.96 21.96)">
+              <tspan x="0" y="0">中川賢一</tspan>
+            </text>
+          </svg>
+        </h1>
+
+        <p>
+          札幌市市議会議員 中川賢一 <br class="mobile-only" />オフィシャルサイト
+        </p>
+        <aside class="switch">
+          <div class="onofftext"></div>
+          <div class="onoffswitch">
+            <input
+              type="checkbox"
+              name="onoffswitch"
+              class="onoffswitch-checkbox"
+              id="myonoffswitch"
+              tabindex="0"
+            />
+            <label class="onoffswitch-label" for="myonoffswitch"></label>
+          </div>
+        </aside>
+      </div>
+
+      <div class="msg">
+        <div class="text">
+          <h2>大好き札幌</h2>
+          <p>
+            高齢者や世界中の多様な人々が満たされ住みよい街づくりを目指し、子育てというかけがえのない営みをもっと喜べる環境を整え、
+            子どもたちが自分たちの街に誇りを持ち世界にも目を向けられる教育を目指して地域の発展に力を注ぎます。
+          </p>
+          <p>大好きだからこそ遂げたい事があるのです。</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="photos">
+      <div class="text">
+        <h2>活 動 記 録</h2>
+        <p>
+          札幌市における今後の発展と推進を願い、これからも尽力してまいります。
+        </p>
+      </div>
+
+      <ul>
+        <li><img src="img/dammy-img-small.png" alt="サンプル1" /></li>
+        <li><img src="img/dammy-img-small.png" alt="サンプル2" /></li>
+        <li><img src="img/dammy-img-small.png" alt="サンプル3" /></li>
+      </ul>
+
+      <p class="link"><a href="#">※詳細はこちらから</a></p>
+    </section>
+
+    <section class="profile">
+      <div class="text">
+        <h2>profile</h2>
+
+        <div class="profile-inner">
+          <figure class="item">
+            <img
+              class="img-size"
+              src="img/profile-main-img03-small.png"
+              alt="プロフィール画像"
+            />
+          </figure>
+          <div class="item">
+            <h2>中 川 賢 一</h2>
+            <p>
+              1967年1月9日-
+              札幌市立緑丘小学校、札幌市立伏見中学校、札幌南高校、東北大学経済学部卒業、シンガポール国立大学マーケティング学位取得。
+              北海道拓殖銀行を経て、北海道庁入庁。道シンガポール事務所駐在員など、主に経済政策に従事。退職後、札幌国際大学非常勤講師などを務める。
+              平成27年、札幌市議会議員に当選。現在2期目。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h4>中川賢一事務所</h4>
+      <p>
+        〒064-0920 北海道札幌市中央区南二十条西6丁目4-10 <br />フラッツ幌南1階
+      </p>
+
+      <ul>
+        <li>
+          <a href="#">
+            <i class="ri-twitter-x-fill"></i>
+            <span class="sr-only">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="ri-facebook-circle-fill"></i>
+            <span class="sr-only">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="ri-instagram-line"></i>
+            <span class="sr-only">Instagram</span>
+          </a>
+        </li>
+      </ul>
+
+      <p>&copy; kenichi Nakagawa Office All Right Reserve</p>
+    </footer>
+
+    <script>
+      var osDark = window.matchMedia("(prefers-color-scheme:dark)");
+      var mySwitch = document.getElementById("myonoffswitch");
+
+      function darkModeOn() {
+        document.documentElement.classList.add("darkmode");
+        mySwitch.checked = true;
+      }
+
+      function darkModeOff() {
+        document.documentElement.classList.remove("darkmode");
+        mySwitch.checked = false;
+      }
+
+      if (osDark.matches) {
+        darkModeOn();
+      }
+
+      if (sessionStorage.getItem("darkMode") === "on") {
+        darkModeOn();
+      } else if (sessionStorage.getItem("darkMode") === "off") {
+        darkModeOff();
+      } else if (osDark.matches) {
+        darkModeOn();
+      }
+
+      mySwitch.addEventListener("change", function () {
+        if (mySwitch.checked) {
+          darkModeOn();
+          sessionStorage.setItem("darkMode", "on");
+        } else {
+          darkModeOff();
+          sessionStorage.setItem("darkMode", "off");
+        }
+      });
+
+      osDark.addListener(function () {
+        if (osDark.matches) {
+          darkModeOn();
+        } else {
+          darkModeOff();
+        }
+      });
+    </script>
+  </body>
+</html>
